@@ -21,9 +21,16 @@
         </style>
     </head>
     <body>
-     @if(10 > 5)
-            <p>True</p>
-     @endif
-     <p>{{$nome}}</p>
+            @for($i = 0; $i < count($array); $i++)
+                <p>{{$array[$i]}} - {{$i}}</p>
+            @endfor
+            @php 
+                echo $array[1];
+            @endphp
+            {{-- Comentário Blade --}}
+            @foreach($nome as $sNome)
+            <p>{{$loop->index}}</p>
+            <p>{{$sNome}}</p>
+            @endforeach
     </body>
 </html>
