@@ -1,0 +1,1 @@
+Criar a pasta env composer run post-root-package-install
