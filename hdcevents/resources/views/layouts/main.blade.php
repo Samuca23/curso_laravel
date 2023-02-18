@@ -17,7 +17,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="collapse navbar-collapse" id="navbar">
-                <a href="" class="navbar-brand">
+                <a href="/" class="navbar-brand">
                     <img src="/img/icon_event.png" alt="hdcEvents">
                 </a>
                 <ul class="navbar-nav">
@@ -39,7 +39,7 @@
     </header>
     @yield('content')
     <footer>
-        <p>HDC Events &copy; 2023</p>
+        <p>HDC Events & Samuel Chiodini &copy; 2023</p>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>
