@@ -1,3 +1,7 @@
 Criar a pasta env composer run post-root-package-install
 
-opa
+Migrations
+Criar Migrations: php artisan make:migration "name"
+Mandar a migration: php artisan migrate
+Atualizar as migrations: php artisan migrate:fresh
+Verificar status das Migrations: php artisan migrate:status
