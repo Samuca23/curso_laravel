@@ -13,8 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('produts', function (Blueprint $table) {
-            $table->decimal('preco');
+        Schema::create('events', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+            $table->string("title");
+            $table->text("description");
+            $table->text("city");
+            $table->boolean("private");
         });
     }
 
@@ -25,8 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('produts', function (Blueprint $table) {
-            $table->decimal('preco');
-        });
+        Schema::dropIfExists('events');
     }
 };
