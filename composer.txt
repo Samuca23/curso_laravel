@@ -3,5 +3,7 @@ Criar a pasta env composer run post-root-package-install
 Migrations
 Criar Migrations: php artisan make:migration "name"
 Mandar a migration: php artisan migrate
-Atualizar as migrations: php artisan migrate:fresh
+Atualizar as migrations: php artisan migrate:fresh, assim apaga todos os registros das tabelas
 Verificar status das Migrations: php artisan migrate:status
+
+* Ao adicionar um novo campo a uma tabela, devemos criar uma nova migration
