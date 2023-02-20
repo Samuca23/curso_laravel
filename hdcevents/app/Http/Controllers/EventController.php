@@ -26,6 +26,6 @@ class EventController extends Controller
 
         $oEvent->save();
 
-        return  redirect('/');
+        return  redirect('/')->with('msg', 'Evento criado com sucesso!');
     }
 }
