@@ -24,6 +24,16 @@ class EventController extends Controller
         $oEvent->private = $oRequest->private;
         $oEvent->description = $oRequest->description;
 
+        if ($oRequest->hasFile('image') && $oRequest->file('image')->isValid()) {
+            $oRequestImage = $oRequest->image;
+
+            $oExtension = $oRequestImage->extension();
+            $sImageName = md5($oRequestImage->getClientOriginalName() . strtotime("NOW()") . "." . $oExtension);
+            $oRequestImage->move(public_path('img/event'), $sImageName);
+
+            $oEvent->image = $sImageName;
+        }
+
         $oEvent->save();
 
         return  redirect('/')->with('msg', 'Evento criado com sucesso!');
