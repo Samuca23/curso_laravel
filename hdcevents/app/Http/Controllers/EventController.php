@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
-
+use App\Models\User;
 class EventController extends Controller
 {
     public function index() {
@@ -53,6 +53,8 @@ class EventController extends Controller
     public function show($id) {
         $oEvent = Event::findOrFail($id);
 
-        return view('events.show', ['event' => $oEvent]);
+        $eventOwner = User::where('id', $oEvent->user_id)->first()->toArray();
+
+        return view('events.show', ['event' => $oEvent, 'eventOwener' => $eventOwner]);
     }
 }
