@@ -8,8 +8,14 @@ use App\Models\Event;
 class EventController extends Controller
 {
     public function index() {
-        $events = Event::all();
-        return view('welcome', ['events' => $events]);
+        $sSearch = request('search');
+        if ($sSearch) {
+            $events = Event::where([['title', 'like', '%' . $sSearch . '%' ]])->get();
+        } else {
+            $events = Event::all();
+        }
+        return view('welcome', ['events' => $events, 'search' => $sSearch]);
+
     }
 
     public function create() {
