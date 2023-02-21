@@ -7,3 +7,19 @@ Migrations
 * Verificar status das Migrations: php artisan migrate:status
 
 * Ao adicionar um novo campo a uma tabela, devemos criar uma nova migration
+
+
+Para roda o projeto
+Necessário: 
+1 - Ter o Composer
+2 - Ter o Node
+3 - Ter o XAMPP
+4 - Criar um database chamado 'hdcevents' no phpMyAdmin
+5 - Ter o Jetstream e o Livewire
+
+Passos:
+1 - Abrir o XAMPP e ligar o 'Apache' e o 'MySQL'
+2 - Abrir o phpMyAdmin e criar o data base hdcevents
+3 - Abrir o projeto e rodar as migrations
+4 - Rodar o php artisan serve.
+
