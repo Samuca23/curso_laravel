@@ -20,6 +20,7 @@ class EventController extends Controller
         $oEvent = new Event;
 
         $oEvent->title = $oRequest->title;
+        $oEvent->date = $oRequest->date;
         $oEvent->city = $oRequest->city;
         $oEvent->private = $oRequest->private;
         $oEvent->description = $oRequest->description;
