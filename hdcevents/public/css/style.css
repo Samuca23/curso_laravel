@@ -89,14 +89,18 @@ header {
     border-radius: 10px;
     padding: 0;
     margin: 0.5%;
+    overflow: hidden;
 }
 
 #events-container img {
     max-height: 300px;
+    min-height: 300px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
-
 
 .card card-date {
     font-size: 12px;
@@ -187,5 +191,14 @@ footer p {
 
 #info-container #event-submit {
     margin: 20px 0;
+}
+
+#items-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#items-list li {
+    display: flex;
 }
 

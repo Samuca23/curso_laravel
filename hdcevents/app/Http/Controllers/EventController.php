@@ -23,6 +23,7 @@ class EventController extends Controller
         $oEvent->city = $oRequest->city;
         $oEvent->private = $oRequest->private;
         $oEvent->description = $oRequest->description;
+        $oEvent->items = $oRequest->items;
 
         if ($oRequest->hasFile('image') && $oRequest->file('image')->isValid()) {
             $oRequestImage = $oRequest->image;
