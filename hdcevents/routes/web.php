@@ -21,3 +21,4 @@ Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('aut
 
 Route::post('/events', [EventController::class, 'store']);
 
+Route::delete('/events/{id}', [EventController::class, 'destroy']);
