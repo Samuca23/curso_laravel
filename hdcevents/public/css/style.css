@@ -219,3 +219,8 @@ footer p {
 .dashboard-events-container form {
     display: inline-block;
 }
+
+.img-preview {
+    width: 100px;
+    margin-top: 20px;
+}
