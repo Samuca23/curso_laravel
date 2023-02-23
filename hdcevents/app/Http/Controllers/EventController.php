@@ -59,9 +59,10 @@ class EventController extends Controller
     }
 
     public function dashboard() {
-        $oUser = auth()->user();
-        $oEvent = $oUser->event;
+        $user = auth()->user();
 
-        return view('events.dashboard', ['event' => $oEvent]);
+        $event = $user->events;
+
+        return view('events.dashboard', ['events' => $event]);
     }
 }
