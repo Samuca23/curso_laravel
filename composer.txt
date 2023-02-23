@@ -16,6 +16,8 @@ Necessário:
 3 - Ter o XAMPP
 4 - Criar um database chamado 'hdcevents' no phpMyAdmin
 5 - Ter o Jetstream e o Livewire
+5.1 - composer require laravel/Jetstream
+5.2 - php artisan jetstream:install livewire
 
 Passos:
 1 - Abrir o XAMPP e ligar o 'Apache' e o 'MySQL'
